@@ -1,0 +1,71 @@
+/* Define Color Palettes */
+:root {
+    --background-light: #F8F1E5;
+    --text-light: #4B2E39;
+    --calendar-light: #FFD1DC;
+    --day-bg-light: #6D6875;
+    --day-text-light: #FFFFFF;
+    --border-light: #A67B5B;
+}
+
+/* Light Mode */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    font-family: 'Cursive', sans-serif;
+    text-align: center;
+}
+
+/* Ramadan Title */
+.month-title {
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* Calendar Styles */
+.calendar {
+    list-style-type: none;
+    background-color: var(--calendar-light);
+    border: 5px solid var(--border-light);
+    width: 210px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Day Names */
+.days {
+    background-color: var(--day-bg-light);
+    color: var(--day-text-light);
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Regular Calendar Squares */
+.calendar li {
+    border: 2px solid var(--border-light);
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Remove Border for Empty Spaces */
+.calendar li.space {
+    border: none;
+    background: none;
+}
+
+/* Special Styling for 30th */
+.calendar li.thirty {
+    border: 2px dotted var(--border-light);
+}
